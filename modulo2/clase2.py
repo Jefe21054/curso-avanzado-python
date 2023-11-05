@@ -3,6 +3,10 @@ PROGRAMA PARA GUARDAR DATOS DE MI PC
 '''
 import platform
 import socket
+from pathlib import Path
+
+
+FILE_PATH = Path('pc.txt')
 
 
 def guardar_pc_info():
@@ -16,18 +20,17 @@ def guardar_pc_info():
     pc_data += 'DIRECCION IP : '
     pc_data += socket.gethostbyname(socket.gethostname()) + '\n'
 
-    pc_file = open('pc.txt', 'w')
-    pc_file.write(pc_data)
-    pc_file.close()
+    with open(FILE_PATH, 'w') as pc_file:
+        pc_file.write(pc_data)
 
     print('Archivo guardado con EXITO!')
 
 
 def leer_pc_info():
     try:
-        pc_file = open('pc.txt', 'r')
-        pc_data = pc_file.read()
-        print(pc_data)
+        with open(FILE_PATH, 'r') as pc_file:
+            pc_data = pc_file.read()
+            print(pc_data)
     except FileNotFoundError:
         print('No se encontro el archivo')
 
