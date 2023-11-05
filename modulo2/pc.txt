@@ -1,0 +1,6 @@
+============ INFO DE PC ============
+SISTEMA OPERATIVO : Windows 10.0.22621
+ARQUITECTURA : AMD64
+PROCESADOR : Intel64 Family 6 Model 158 Stepping 10, GenuineIntel
+HOSTNAME : DESKTOP-BB91FSL
+DIRECCION IP : 192.168.56.1
